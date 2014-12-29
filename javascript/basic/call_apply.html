@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>call和apply的区别</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            function user(first,last,age){
+                console.log("username is"+first+"-"+last+",age is:"+age);
+            }
+            user.call(window,'Lee','Li',26);
+            user.apply(window,['Lucy','Li',30]);
+            
+            var str='abc';
+            var arr=Array.prototype.slice.call(str,0);
+            var arrLength=arr.length;
+            debugger;
+            var result='';
+            for(var i=0;i<arr.length-1;i++){
+                result+=arr[i]+"_";
+            }
+            result+=arr[arrLength-1];
+            
+            console.log(result);
+            
+        </script>
+    </body>
+</html>
