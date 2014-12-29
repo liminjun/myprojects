@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>css 三角形</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #demo{
+                    width:100px;
+                    height:100px;
+                    border:2px solid #000;
+                    background:#fff;
+            
+            }
+            #demo:before{
+                content:"";
+                content:"";
+                background-color:yellow;
+                width:10px;
+                height:10px;
+                background: yellow;
+                border-width:10px; 
+                border-style:solid;
+                border-color:#fff #fff #fff #0099cc;
+                position: relative;
+                left: 100px;
+                top:20px;
+            }
+            #demo:after{
+                content:"";
+                background-color:yellow;
+                
+                background: yellow;
+                border-width:5px; 
+                border-style:solid;
+                border-color:#fff #fff #fff #0099cc;
+                position: relative;
+                left: 110px;
+                top:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="demo"></div>
+    </body>
+</html>

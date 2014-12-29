@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>scope和context的demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var a=100;
+            if(a==100){
+                var b=111;
+                //console.log(b);
+            }else{
+                var c=222;
+                console.log("the b in else statement:"+b);
+                console.log(c);
+            }
+            console.log(b);
+            console.log(c);
+            //output
+            //111
+            //undefined
+            </script>
+    </body>
+</html>
