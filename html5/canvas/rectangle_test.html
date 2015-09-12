@@ -15,16 +15,28 @@
 		ctx.strokeRect(50,50,100,100);
 
 		
-		ctx.beginPath();
+		// ctx.beginPath();
 		
-		ctx.moveTo(75,75);
-		ctx.lineTo(125,125);
-		ctx.lineTo(125,75);
-		ctx.lineTo(75,75);
+		// ctx.moveTo(75,75);
+		// ctx.lineTo(125,125);
+		// ctx.lineTo(125,75);
+		// ctx.lineTo(75,75);
+		
+		// ctx.fillStyle="blue";
+		// ctx.strokeStyle="green"
+		// ctx.fill();
+		
+		// ctx.fillText("Hello Udacity",50,10);
+		
+		ctx.font="36pt Impact";
+		ctx.textAlign="center";
 		
 		ctx.fillStyle="blue";
-		ctx.strokeStyle="green"
-		ctx.fill();
+		ctx.fillText("Canvas Memes",c.width/2,40);
+		
+		ctx.strokeStyle="green";
+		ctx.lineWidth=3;
+		ctx.strokeText("Canvas Memes",c.width/2,100);
 	</script>
 </body>
 

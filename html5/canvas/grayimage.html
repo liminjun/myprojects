@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<title>HTML5 canvas gray image</title>
+</head>
+
+<body>
+	<canvas id="my-canvas" width="500" height="500">
+
+	</canvas>
+	<script>
+		var c=document.querySelector("#my-canvas");
+		var ctx=c.getContext("2d");
+		
+		
+		
+		var image=new Image();
+		image.onload=function(){
+			ctx.drawImage(image,0,0);
+			
+			makeGrayScale();
+		}
+		image.src="my.jpg";
+
+		var pixelGrayScaleImage=function(r,g,b,a){
+			var gray=(0.3*r)+(0.59*g)+(0.11*b);
+			return {r:gray,g:gray,b:gray,a:gray};
+		}
+		function makeGrayScale(){
+			var r,g,b,a;
+			var imageData=ctx.getImageData(0,0,480,640);
+			var numPixels=imageData.data.length/4;
+
+			for (var i = 0; i <numPixels; i++) {
+				r=imageData.data[i*4+0];
+				g=imageData.data[i*4+1];
+				b=imageData.data[i*4+2];
+				a=imageData.data[i*4+3];
+
+				var pixel=pixelGrayScaleImage(r,g,b,a);
+				debugger;
+				imageData.data[i*4+0]=pixel.r;
+				imageData.data[i*4+1]=pixel.g;
+				imageData.data[i*4+2]=pixel.b;
+				imageData.data[i*4+3]=pixel.a;
+			};
+			ctx.putImageData(imageData,0,0);
+		}
+		
+	</script>
+</body>
+</html>
