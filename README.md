@@ -14,3 +14,4 @@ myprojects
 Author:LeeLi
 E-mail:v-leeli@hotmail.com
 博客:http://wwww.cnblogs.com/liminjun88
+微博：http://weibo.com/liminjun
